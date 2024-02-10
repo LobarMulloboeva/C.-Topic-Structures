@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+#define line_length 35
+
+int main(void)
+{
+    char actor1[] = "Judy Garland";
+    char age1 = 22;
+    char role1[] = "Dorothy";
+    
+    char actor2[] = "Sam Miller";
+    char age2 = 32;
+    char role2[] = "Steve";
+    
+    char actor3[] = "Michael Scott";
+    char age3 = 45;
+    char role3[] = "Scarn";
+ 
+    char actor4[] = "Jim Halpert";
+    char age4 = 30;
+    char role4[] = "Golden Face";
+    int line;
+    
+    printf("Wizard of Oz Database!\n");
+
+    printf("%-15s\t%3s\t%-15s\n", "Actor", "Age", "Role");
+    for(line = 0; line < line_length; line++) putchar('-');
+    {
+        putchar('\n');
+    }
+
+    printf("%-15s\t%3d\t%-15s\n", actor1, age1, role1);
+    printf("%-15s\t%3d\t%-15s\n", actor2, age2, role2);
+    printf("%-15s\t%3d\t%-15s\n", actor3, age3, role3);
+    printf("%-15s\t%3d\t%-15s\n", actor4, age4, role4);
+    return 0;
+}
