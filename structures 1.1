@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main(void)
+{
+    struct info
+    {
+        char letter;
+        int number;
+    }my, his;
+
+    //his info//
+    his.letter = 'A';
+    his.number = 199;
+
+    //my info//
+    puts("Your info!");
+    printf("What is your favorite number?\n");
+    scanf("%i", &my.number);
+
+    while(getchar() != '\n'); // use this loop to remove \n(left from scanf) from an input buffer
+
+    printf("What is your favorite letter?\n");
+    my.letter = getchar();
+
+    //display//
+    printf("Your favorite number is %i\n", my.number);
+    printf("Your favorite letter is %c\n", my.letter);
+    printf("His favorite number is %i\n", his.number);
+    printf("His favorite letter is %c\n", his.letter);
+}
