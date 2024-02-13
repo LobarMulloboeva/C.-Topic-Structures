@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main(void)
+{
+    struct info
+    {
+        char name[20];
+        int age;
+        char likes[60];
+        char dislikes[60];
+        float iq;
+    };
+
+    struct info person_1 = 
+    {
+        "Kelly",
+        24,
+        "talking, movies, books",
+        "diets",
+        89.7
+    };
+
+    puts("Brief info about my co-worker");
+    printf("%9s %s\n", "Name:", person_1.name);
+    printf("%9s %i\n", "Age:", person_1.age);
+    printf("%9s %s\n", "Likes:", person_1.likes);
+    printf("%9s %s\n", "Dislikes:", person_1.dislikes);
+    printf("%9s %2f\n", "IQ:", person_1.iq);
+}
