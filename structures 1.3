@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int length;
+int x;
+
+int main(void)
+{
+    struct actors
+    {
+        char name[16];
+        int age;
+        char role[20];
+    };
+
+    struct actors cast[2] = 
+    {
+        "Kelly", 24, "Juliet",
+        "Steve", 45, "Michael"
+    };
+
+    //draw the table heading
+    puts("Our Database!");
+    printf("%-10s\t%5s\t%10s\n", "Name", "Age", "Role");
+
+    for(length = 0; length < 35; length++) putchar('-');
+    putchar('\n');
+
+    //display the data
+    for(x = 0; x < 2; x++)
+    {
+        printf("%-10s\t%5i\t%10s\n", cast[x].name, cast[x].age, cast[x].role);
+    }
+    return 0;
+}
