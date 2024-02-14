@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+
+//nested structures
+int main(void)
+{
+    struct birthday
+    {
+        int day;
+        int month;
+        int year;
+    };
+
+    struct family
+    {
+        char name[20];
+        struct birthday info;
+    }me;
+
+    strcpy(me.name, "Jay");
+    me.info.day = 12;
+    me.info.month = 3;
+    me.info.year = 2001;
+
+    printf("%s %i %i %i", me.name, me.info.day, me.info.month, me.info.year);   
+
+    return 0;
+}
