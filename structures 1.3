@@ -18,6 +18,12 @@ int main(void)
         "Steve", 45, "Michael"
     };
 
+    //swapping values in struct actors using temp;
+    struct actors temp;
+    temp = cast[0];
+    cast[0] = cast[1];
+    cast[1] = temp;
+
     //draw the table heading
     puts("Our Database!");
     printf("%-10s\t%5s\t%10s\n", "Name", "Age", "Role");
